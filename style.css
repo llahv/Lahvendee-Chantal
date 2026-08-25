@@ -1193,6 +1193,10 @@ body.dark .expand-content p b {
 
 /* mobile */
 
+/* MUSIC BUTTON SPACING */
+#musicButton {
+    margin-top: 18px;
+}
 @media (max-width: 600px) {
 
     .expand-content p {
