@@ -177,51 +177,63 @@ body.dark {
 
 /* ==================== MUSIC BUTTON ==================== */
 
+.top {
+    position: relative;
+}
+
+/* THEME BUTTON */
+#themeButton {
+    position: absolute !important;
+
+    top: 0 !important;
+    right: 0 !important;
+
+    margin: 0 !important;
+
+    width: 32px !important;
+    height: 32px !important;
+}
+
+
+/* MUSIC BUTTON */
+#musicButton,
 .music-button {
-    position: absolute;
+    position: absolute !important;
 
-    right: 0;
-    top: 44px;
+    top: 42px !important;
+    right: 0 !important;
+    left: auto !important;
+    bottom: auto !important;
 
-    width: 32px;
-    height: 32px;
+    width: 42px !important;
+    height: 42px !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 !important;
 
-    border:
-        1px solid
-        var(--line);
+    display: flex !important;
 
-    border-radius: 50%;
+    align-items: center !important;
+    justify-content: center !important;
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            0.65
-        );
+    border: 1px solid var(--line) !important;
+
+    border-radius: 50% !important;
+
+    background: rgba(255, 255, 255, 0.65) !important;
 
     backdrop-filter: blur(8px);
 
     color: var(--purple-dark);
 
-    font-size: 0.85rem;
+    font-size: 1rem;
 
     cursor: pointer;
 
-    z-index: 20;
+    z-index: 200;
 
     box-shadow:
         0 5px 20px
-        rgba(
-            109,
-            61,
-            145,
-            0.12
-        );
+        rgba(109, 61, 145, 0.12);
 
     transition:
         transform 0.3s ease,
@@ -229,8 +241,11 @@ body.dark {
         box-shadow 0.3s ease;
 }
 
+
+/* MUSIC BUTTON HOVER */
+#musicButton:hover,
 .music-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
 
     background:
         rgba(
@@ -238,22 +253,21 @@ body.dark {
             168,
             232,
             0.35
-        );
+        ) !important;
 
     box-shadow:
         0 8px 25px
-        rgba(
-            109,
-            61,
-            145,
-            0.2
-        );
+        rgba(109, 61, 145, 0.2);
 }
 
+
+/* MUSIC PLAYING */
+#musicButton.playing,
 .music-button.playing {
     animation:
         musicPulse 1.5s ease-in-out infinite;
 }
+
 
 @keyframes musicPulse {
 
@@ -265,11 +279,12 @@ body.dark {
     50% {
         transform: scale(1.08);
     }
+
 }
 
 
-/* DARK MODE MUSIC */
-
+/* DARK MODE */
+body.dark #musicButton,
 body.dark .music-button {
     background:
         rgba(
@@ -277,9 +292,26 @@ body.dark .music-button {
             25,
             45,
             0.75
-        );
+        ) !important;
 
     color: #dfbdf3;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    #themeButton {
+        right: 0 !important;
+        top: 0 !important;
+    }
+
+    #musicButton,
+    .music-button {
+        right: 0 !important;
+        top: 42px !important;
+    }
+
 }
 
 
