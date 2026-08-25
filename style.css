@@ -133,6 +133,9 @@ body.dark {
     text-align: center;
 }
 
+
+/* ==================== THEME BUTTON ==================== */
+
 .tiny-button {
     position: absolute;
 
@@ -141,6 +144,10 @@ body.dark {
 
     width: 32px;
     height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     border:
         1px solid
@@ -155,6 +162,8 @@ body.dark {
     cursor: pointer;
 
     transition: 0.3s;
+
+    z-index: 20;
 }
 
 .tiny-button:hover {
@@ -163,6 +172,114 @@ body.dark {
     background: var(--purple);
 
     color: white;
+}
+
+
+/* ==================== MUSIC BUTTON ==================== */
+
+.music-button {
+    position: absolute;
+
+    right: 0;
+    top: 44px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.65
+        );
+
+    backdrop-filter: blur(8px);
+
+    color: var(--purple-dark);
+
+    font-size: 0.85rem;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    box-shadow:
+        0 5px 20px
+        rgba(
+            109,
+            61,
+            145,
+            0.12
+        );
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.music-button:hover {
+    transform: scale(1.1);
+
+    background:
+        rgba(
+            219,
+            168,
+            232,
+            0.35
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            109,
+            61,
+            145,
+            0.2
+        );
+}
+
+.music-button.playing {
+    animation:
+        musicPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+
+/* DARK MODE MUSIC */
+
+body.dark .music-button {
+    background:
+        rgba(
+            35,
+            25,
+            45,
+            0.75
+        );
+
+    color: #dfbdf3;
 }
 
 
@@ -196,10 +313,20 @@ body.dark {
 
     box-shadow:
         0 0 15px
-        rgba(157, 104, 197, 0.35),
+        rgba(
+            157,
+            104,
+            197,
+            0.35
+        ),
 
         0 0 40px
-        rgba(219, 168, 232, 0.25);
+        rgba(
+            219,
+            168,
+            232,
+            0.25
+        );
 
     animation:
         floating 4s ease-in-out infinite;
@@ -225,7 +352,12 @@ body.dark {
 
     border:
         1px solid
-        rgba(157, 104, 197, 0.35);
+        rgba(
+            157,
+            104,
+            197,
+            0.35
+        );
 
     border-radius: 50%;
 
@@ -281,7 +413,9 @@ h1 {
 
     color: var(--purple-dark);
 
-    font-family: "Sacramento", cursive;
+    font-family:
+        "Sacramento",
+        cursive;
 
     font-size:
         clamp(
@@ -347,13 +481,23 @@ h1 {
     100% {
         box-shadow:
             0 0 0 0
-            rgba(181, 126, 220, 0.4);
+            rgba(
+                181,
+                126,
+                220,
+                0.4
+            );
     }
 
     50% {
         box-shadow:
             0 0 0 6px
-            rgba(181, 126, 220, 0);
+            rgba(
+                181,
+                126,
+                220,
+                0
+            );
     }
 }
 
@@ -469,7 +613,9 @@ h1 {
 
     color: var(--purple-dark);
 
-    font-family: "Sacramento", cursive;
+    font-family:
+        "Sacramento",
+        cursive;
 
     font-size: 2.8rem;
 
@@ -691,7 +837,12 @@ h1 {
 
 .trait-list span:hover {
     background:
-        rgba(181, 126, 220, 0.15);
+        rgba(
+            181,
+            126,
+            220,
+            0.15
+        );
 
     transform:
         translateY(-3px);
@@ -927,6 +1078,121 @@ body.dark .tiny-button {
 }
 
 
+/* ==================== AESTHETIC DROPDOWN CONTENT ==================== */
+
+.expand-content p {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin: 0;
+
+    padding:
+        10px
+        4px;
+
+    line-height: 1.7;
+
+    border-bottom:
+        1px solid
+        rgba(
+            150,
+            120,
+            180,
+            0.12
+        );
+}
+
+.expand-content p:last-child {
+    border-bottom: none;
+}
+
+.expand-content p b {
+    min-width: 105px;
+
+    font-weight: 600;
+
+    color: #8d6cae;
+
+    letter-spacing: 0.3px;
+}
+
+.expand-content p span {
+    flex: 1;
+
+    color: #6f6078;
+}
+
+.expand-content p:hover {
+    padding-left: 8px;
+
+    transition: 0.2s ease;
+}
+
+
+/* CREATOR INFORMATION */
+
+#creator .expand-content p b {
+    position: relative;
+}
+
+#creator .expand-content p b::after {
+    content: "♡";
+
+    margin-left: 5px;
+
+    font-size: 9px;
+
+    opacity: 0.45;
+}
+
+
+/* ==================== BYI / DNI ==================== */
+
+.expand-content p b {
+    color: var(--purple-dark);
+}
+
+.expand-content p > b {
+    font-size: 0.95rem;
+
+    letter-spacing: 0.5px;
+}
+
+.expand-content p:has(br) {
+    line-height: 2;
+}
+
+.expand-content p {
+    text-align: left;
+
+    word-break: normal;
+
+    overflow-wrap: break-word;
+}
+
+.expand-content p + p {
+    margin-top: 18px;
+}
+
+
+/* ==================== DARK MODE DROPDOWNS ==================== */
+
+body.dark .expand-content p {
+    color: #c9b7d2;
+}
+
+body.dark .expand-content p b {
+    color: #dfbdf3;
+}
+
+body.dark .expand-content p span {
+    color: #c9b7d2;
+}
+
+
 /* ==================== MOBILE ==================== */
 
 @media (max-width: 600px) {
@@ -956,10 +1222,22 @@ body.dark .tiny-button {
     .profile-wrap {
         transform: scale(0.9);
     }
-}
 
+    .expand-content p {
+        font-size: 0.8rem;
 
-@media (max-width: 500px) {
+        line-height: 1.8;
+    }
+
+    .expand-content p {
+        flex-direction: column;
+
+        gap: 2px;
+    }
+
+    .expand-content p b {
+        min-width: unset;
+    }
 
     .social-link {
         padding:
@@ -971,256 +1249,17 @@ body.dark .tiny-button {
         max-width: 55%;
     }
 
-}
-
-/* ==================== MUSIC BUTTON ==================== */
-
-.music-button {
-    position: fixed;
-
-    left: 22px;
-    bottom: 22px;
-
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid var(--line);
-
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.65);
-
-    backdrop-filter: blur(8px);
-
-    color: var(--purple-dark);
-
-    font-size: 1rem;
-
-    cursor: pointer;
-
-    z-index: 200;
-
-    box-shadow:
-        0 5px 20px
-        rgba(109, 61, 145, 0.12);
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.music-button:hover {
-    transform: scale(1.1) rotate(8deg);
-
-    background:
-        rgba(
-            219,
-            168,
-            232,
-            0.35
-        );
-
-    box-shadow:
-        0 8px 25px
-        rgba(109, 61, 145, 0.2);
-}
-
-.music-button.playing {
-    animation:
-        musicPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes musicPulse {
-
-    0%,
-    100% {
-        transform: scale(1);
+    /* Music stays directly under theme button */
+    .tiny-button {
+        right: 0;
+        top: 0;
     }
-
-    50% {
-        transform: scale(1.08);
-    }
-}
-
-
-/* Dark Mode */
-
-body.dark .music-button {
-    background:
-        rgba(
-            35,
-            25,
-            45,
-            0.75
-        );
-
-    color: #dfbdf3;
-}
-
-
-/* Mobile */
-
-@media (max-width: 600px) {
 
     .music-button {
-        left: 15px;
-        bottom: 15px;
+        right: 0;
+        top: 44px;
+
+        left: auto;
+        bottom: auto;
     }
-
-}
-
-/* ==================== BYI / DWI / DNI ==================== */
-
-.expand-content p b {
-    color: var(--purple-dark);
-}
-
-
-/* BYI / DWI / DNI HEADINGS */
-
-.expand-content p > b {
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-}
-
-
-/* PERSONAL INFO / BYI */
-
-.expand-content p:has(br) {
-    line-height: 2;
-}
-
-
-/* DO INTERACT + DO NOT INTERACT */
-
-.expand-content p {
-    color: #80698d;
-}
-
-
-/* Keep the paragraphs neat */
-
-.expand-content p {
-    text-align: left;
-    word-break: normal;
-    overflow-wrap: break-word;
-}
-
-
-/* Little spacing between each section */
-
-.expand-content p + p {
-    margin-top: 18px;
-}
-
-
-/* ==================== DARK MODE ==================== */
-
-body.dark .expand-content p {
-    color: #c9b7d2;
-}
-
-body.dark .expand-content p b {
-    color: #dfbdf3;
-}
-
-
-/* ==================== MOBILE ==================== */
-
-@media (max-width: 600px) {
-
-    .expand-content p {
-        font-size: 0.8rem;
-        line-height: 1.8;
-    }
-
-}
-
-
-
-/* ================================
-   AESTHETIC DROPDOWN CONTENT
-   ================================ */
-
-.expand-content p {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin: 0;
-    padding: 10px 4px;
-    line-height: 1.7;
-    border-bottom: 1px solid rgba(150, 120, 180, 0.12);
-}
-
-.expand-content p:last-child {
-    border-bottom: none;
-}
-
-.expand-content p b {
-    min-width: 105px;
-    font-weight: 600;
-    color: #8d6cae;
-    letter-spacing: 0.3px;
-}
-
-.expand-content p span {
-    flex: 1;
-    color: #6f6078;
-}
-
-.expand-content p:hover {
-    padding-left: 8px;
-    transition: 0.2s ease;
-}
-
-/* softer labels for the information sections */
-
-#creator .expand-content p b {
-    position: relative;
-}
-
-#creator .expand-content p b::after {
-    content: "♡";
-    margin-left: 5px;
-    font-size: 9px;
-    opacity: 0.45;
-}
-
-/* mobile */
-
-/* ==================== MUSIC BUTTON ==================== */
-
-#musicButton {
-    display: block !important;
-    margin: 12px auto 20px auto !important;
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-    z-index: 20;
-}
-
-#themeButton {
-    display: block !important;
-    margin: 0 auto !important;
-}
-
-}
-@media (max-width: 600px) {
-
-    .expand-content p {
-        flex-direction: column;
-        gap: 2px;
-    }
-
-    .expand-content p b {
-        min-width: unset;
-    }
-
 }
