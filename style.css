@@ -1193,9 +1193,15 @@ body.dark .expand-content p b {
 
 /* mobile */
 
-/* MUSIC BUTTON SPACING */
+/* ==================== MUSIC BUTTON POSITION ==================== */
+
 #musicButton {
-    margin-top: 18px;
+    position: relative !important;
+    top: 30px !important;
+    margin-bottom: 30px !important;
+    z-index: 10;
+}
+
 }
 @media (max-width: 600px) {
 
