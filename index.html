@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>✦ Lahvendee Chantal</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Sacramento&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PyScript -->
+    <link
+        rel="stylesheet"
+        href="https://pyscript.net/releases/2025.2.2/core.css"
+    >
+
+    <script
+        type="module"
+        src="https://pyscript.net/releases/2025.2.2/core.js"
+    ></script>
+</head>
+
+
+<body>
+
+<audio id="bgMusic" autoplay loop>
+    <source src="./assets/llahvbgmusic.mp3" type="audio/mpeg">
+</audio>
+
+<div id="sparkles"></div>
+
+
+<div class="page">
+
+    <!-- HEADER -->
+
+    <header class="top">
+
+        <button
+            id="themeButton"
+            class="tiny-button"
+            aria-label="Toggle Theme"
+        >
+            ☼
+        </button>
+
+
+        <div class="profile-wrap">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <img
+                src="./assets/Lahv.png"
+                alt="Lahvendee Chantal"
+                class="profile"
+            >
+
+        </div>
+
+
+        <div class="name-decoration">
+            ── ⋆｡°✩ ──
+        </div>
+
+
+        <h1>Lahvendee Chantal</h1>
+
+
+        <p class="pronouns">
+            She/Her · <span id="age">16</span> · Celestial Comet Spirit
+        </p>
+
+
+        <p class="tiny-intro">
+            “I'm not lost — I'm just moving too fast for this world.”
+        </p>
+
+
+        <div class="status">
+            <span class="status-dot"></span>
+
+            <span id="greeting">
+                Currently Drifting Through The Stars
+            </span>
+        </div>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="little-nav" aria-label="Main Navigation">
+
+        <button data-section="about">
+            About
+        </button>
+
+        <span>✦</span>
+
+        <button data-section="personality">
+            Personality
+        </button>
+
+        <span>✦</span>
+
+        <button data-section="lore">
+            Lore
+        </button>
+
+        <span>✦</span>
+
+        <button data-section="links">
+            Extras
+        </button>
+
+        <span>✦</span>
+
+        <button data-section="creator">
+            CREATOR
+        </button>
+
+    </nav>
+
+
+    <main>
+
+        <!-- ==================== ABOUT ==================== -->
+
+        <section
+            id="about"
+            class="content-section active"
+        >
+
+            <div class="section-heading">
+                <span>୨୧</span>
+                <h2>About Me</h2>
+                <span>୨୧</span>
+            </div>
+
+
+            <p class="center-text">
+                Hii! I'm Lahvendee, a young celestial entity still
+                figuring out where exactly I belong among the stars.
+                I'm basically a comet with too many thoughts and
+                absolutely no concept of staying still.
+            </p>
+
+
+            <!-- BASIC INFORMATION -->
+
+            <button class="expand-button">
+                <span>Basic Information</span>
+                <span>＋</span>
+            </button>
+
+
+            <div class="expand-content">
+
+                <p>
+                    <b>Full Name:</b>
+                    Lahvendee Chantal
+                </p>
+
+                <p>
+                    <b>Nicknames / Aliases:</b>
+                    Lahv · Lahven · Dee · Chantal
+                </p>
+
+                <p>
+                    <b>Age:</b>
+                    <span id="ageInfo">16</span>
+                </p>
+
+                <p>
+                    <b>Birthday:</b>
+                    August 13, 2010
+                </p>
+
+                <p>
+                    <b>Zodiac:</b>
+                    Leo · Fire Sign
+                </p>
+
+                <p>
+                    <b>Gender / Pronouns:</b>
+                    She / Her · F
+                </p>
+
+                <p>
+                    <b>Species / Race:</b>
+                    Celestial Comet Spirit
+                </p>
+
+                <p>
+                    <b>Occupation:</b>
+                    Starbound Seeker
+                </p>
+
+                <p>
+                    <b>Affiliations:</b>
+                    Orbit Courts · Skybound Constellation Line
+                </p>
+
+            </div>
+
+
+            <!-- APPEARANCE -->
+
+            <button class="expand-button">
+                <span>Appearance</span>
+                <span>＋</span>
+            </button>
+
+
+            <div class="expand-content">
+
+                <p>
+                    <b>Height:</b>
+                    5'7" — Appears slightly taller when her energy flares.
+                </p>
+
+                <p>
+                    <b>Build:</b>
+                    Fast, almost weightless in movement.
+                </p>
+
+                <p>
+                    <b>Skin Tone:</b>
+                    Soft luminous caramel with a faint star-like shimmer.
+                </p>
+
+                <p>
+                    <b>Hair:</b>
+                    A long, flowing pale lavender-white mane styled in
+                    cloud-like pigtails, decorated with ornate bows and
+                    glowing flowers.
+                </p>
+
+                <p>
+                    <b>Eyes:</b>
+                    Dreamy, soft-focus lavender eyes that appear to glow gently.
+                </p>
+
+                <p>
+                    <b>Distinguishing Features:</b>
+                    A faint magical aura of shimmering stardust,
+                    glowing butterflies, and an ethereal violet light.
+                </p>
+
+                <p>
+                    <b>Scent:</b>
+                    Lavender.
+                </p>
+
+                <p>
+                    <b>Typical Outfit:</b>
+                    A delicate, layered, lacy dress in light violet,
+                    featuring a large bow and soft, wing-like sleeves.
+                </p>
+
+                <p>
+                    <b>Voice/Accent:</b>
+                    Soft and emotionally expressive, with a slightly
+                    echo-like resonance when using her powers.
+                </p>
+
+            </div>
+
+            <div class="quote">
+                “Don't stand in my orbit if you don't intend to stay.”
+            </div>
+
+        </section>
+
+
+        <!-- ==================== PERSONALITY ==================== -->
+
+        <section
+            id="personality"
+            class="content-section"
+        >
+
+            <div class="section-heading">
+                <span>✧</span>
+                <h2>Personality</h2>
+                <span>✧</span>
+            </div>
+
+
+            <div class="trait-list">
+
+                <span>Energetic</span>
+                <span>Impulsive</span>
+                <span>Quick-Witted</span>
+                <span>Curious</span>
+                <span>Stubborn</span>
+                <span>Loyal</span>
+                <span>Protective</span>
+                <span>Intellectual</span>
+                <span>Passionate</span>
+                <span>Independent</span>
+
+            </div>
+
+
+            <!-- STRENGTHS -->
+
+            <button class="expand-button">
+                <span>Strengths</span>
+                <span>＋</span>
+            </button>
+
+
+            <div class="expand-content">
+
+                <ul>
+
+                    <li>
+                        Extremely fast decision-maker, like a meteor.
+                    </li>
+
+                    <li>
+                        Highly adaptive in chaotic environments.
+                    </li>
+
+                    <li>
+                        Fiercely loyal to people she trusts.
+                    </li>
+
+                    <li>
+                        Strategic thinker under pressure.
+                    </li>
+
+                    <li>
+                        Strong instinct for danger and protection.
+                    </li>
+
+                    <li>
+                        High cognitive speed and pattern recognition.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- FLAWS -->
+
+            <button class="expand-button">
+                <span>Flaws</span>
+                <span>＋</span>
+            </button>
+
+
+            <div class="expand-content">
+
+                <ul>
+
+                    <li>
+                        Emotional instability.
+                    </li>
+
+                    <li>
+                        Acts before thinking, sometimes causing consequences.
+                    </li>
+
+                    <li>
+                        Stubborn refusal to yield when she believes she is right.
+                    </li>
+
+                    <li>
+                        Jealousy that can manifest as possessiveness over close bonds.
+                    </li>
+
+                    <li>
+                        Perfectionism tied to her fear of falling out of orbit.
+                    </li>
+
+                    <li>
+                        Difficulty trusting after betrayal.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- LIKES & DISLIKES -->
+
+            <button class="expand-button">
+                <span>Likes & Dislikes</span>
+                <span>＋</span>
+            </button>
+
+
+            <div class="expand-content">
+
+                <p>
+                    <b>Likes:</b>
+                    Motion, speed, challenges, cosmic energy fields,
+                    problem-solving, proving herself, meaningful bonds,
+                    being relied upon, competitive environments, and freedom.
+                </p>
+
+                <p>
+                    <b>Dislikes:</b>
+                    Being ignored, being underestimated, inefficiency,
+                    emotional manipulation, being controlled, betrayal,
+                    and losing control of situations.
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+                “If I stop moving, I disappear.”
+            </div>
+
+        </section>
+
+
+        <!-- ==================== LORE ==================== -->
+
+        <section
+            id="lore"
+            class="content-section"
+        >
+
+            <div class="section-heading">
+                <span>☾</span>
+                <h2>Backstory</h2>
+                <span>☽</span>
+            </div>
+
+
+            <div class="story">
+
+                <h3>Origin</h3>
+
+                <p>
+                    Born from a fragment of cosmic energy tied to a
+                    passing comet, Lahvendee exists as a young celestial
+                    entity still stabilizing her form and identity
+                    among the stars.
+                </p>
+
+
+                <h3>Childhood</h3>
+
+                <p>
+                    She formed consciousness through motion, constantly
+                    drifting through cosmic currents. Stillness was
+                    unfamiliar, making her naturally restless and
+                    impulsive when she later took humanoid form.
+                </p>
+
+
+                <h3>Key Life Events</h3>
+
+                <p>
+                    Her first descent into a physical realm made emotions
+                    overwhelming and unpredictable. She formed her first
+                    “orbit bond” with another being and experienced
+                    betrayal and separation that destabilized her
+                    emotional core.
+                </p>
+
+
+                <h3>Current Situation</h3>
+
+                <p>
+                    Lahvendee currently exists between celestial form
+                    and human-like existence, trying to stabilize her
+                    identity while navigating emotional bonds that
+                    affect her cosmic balance.
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+                “Pressure didn’t crush me — it crystallized me.”
+            </div>
+
+        </section>
+
+
+        <!-- ==================== EXTRAS ==================== -->
+
+        <section
+            id="links"
+            class="content-section"
+        >
+
+            <div class="section-heading">
+                <span>♡</span>
+                <h2>Extras</h2>
+                <span>♡</span>
+            </div>
+
+
+            <!-- ABILITIES -->
+
+            <button class="expand-button">
+                <span>Abilities & Skills</span>
+                <span>＋</span>
+            </button>
+
+
+            <div class="expand-content">
+
+                <p>✦ Comet Burst Movement</p>
+                <p>✦ Stardust Projection</p>
+                <p>✦ Orbital Bonding</p>
+                <p>✦ Gravity Pulse</p>
+                <p>✦ Light Trail Manipulation</p>
+                <p>✦ Celestial Energy Constructs</p>
+                <p>✦ Hyper-Fast Processing Speed</p>
+                <p>✦ Tactical Adaptability</p>
+
+            </div>
+
+
+            <!-- WEAKNESSES -->
+
+            <button class="expand-button">
+                <span>Weaknesses & Limitations</span>
+                <span>＋</span>
+            </button>
+
+
+            <div class="expand-content">
+
+                <p>
+                    ✦ Emotional instability directly affects power stability.
+                </p>
+
+                <p>
+                    ✦ Overexertion can cause “fade states.”
+                </p>
+
+                <p>
+                    ✦ Strong emotional bonds can destabilize her if broken.
+                </p>
+
+                <p>
+                    ✦ She struggles with prolonged stillness and focus.
+                </p>
+
+            </div>
+
+
+            <!-- FUN FACTS -->
+
+            <button class="expand-button">
+                <span>Fun Facts</span>
+                <span>＋</span>
+            </button>
+
+
+            <div class="expand-content">
+
+                <p>
+                    Leaves faint stardust trails when excited or angry.
+                </p>
+
+                <p>
+                    Cannot stay emotionally “still” for long.
+                </p>
+
+                <p>
+                    Her presence subtly affects emotional energy around her.
+                </p>
+
+                <p>
+                    Calls close people her “Orbit Anchors.”
+                </p>
+
+                <p>
+                    Her favorite scent, color, and flower are all lavender.
+                </p>
+
+            </div>
+            
+            <!-- SOCIALS -->
+
+            <div class="social-area">
+
+                <div class="section-heading small-heading">
+                    <span>✦</span>
+                    <h2>Socials</h2>
+                    <span>✦</span>
+                </div>
+
+
+                <a
+                    href="mailto:your@email.com"
+                    class="social-link"
+                >
+                    <span class="social-name">Email</span>
+                    <span class="social-user">your@email.com</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="social-link"
+                    target="_blank"
+                >
+                    <span class="social-name">Discord</span>
+                    <span class="social-user">@YourUsername</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="social-link"
+                    target="_blank"
+                >
+                    <span class="social-name">Spotify</span>
+                    <span class="social-user">@YourUsername</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="social-link"
+                    target="_blank"
+                >
+                    <span class="social-name">Reddit</span>
+                    <span class="social-user">u/YourUsername</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="social-link"
+                    target="_blank"
+                >
+                    <span class="social-name">Roblox</span>
+                    <span class="social-user">@YourUsername</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== CREATOR ==================== -->
+
+        <section
+            id="creator"
+            class="content-section"
+        >
+
+            <div class="section-heading">
+                <span>☾⋆⁺₊✧</span>
+                <h2>The Soul Behind The Stardust</h2>
+                <span>✧₊⁺⋆☽</span>
+            </div>
+
+
+            <!-- ABOUT THE CREATOR -->
+
+            <button class="expand-button">
+                <span>About Me</span>
+                <span>＋</span>
+            </button>
+
+            <div class="expand-content">
+
+                <p>
+                    Hey, I'm Lahv! I'm a 16 y/o E-ISTJ from the Philippines
+                    who's a topper and loves being involved in STEM
+                    competitions.
+                </p>
+
+            </div>
+
+
+            <!-- CREATOR INFORMATION -->
+
+<!-- BASIC INFORMATION -->
+
+<button class="expand-button">
+
+    <span>Basic Information</span>
+
+    <span>＋</span>
+
+</button>
+
+<div class="expand-content">
+
+    <p>
+        <b>Name</b>
+        <span>Lahv / Lahvendee</span>
+    </p>
+
+    <p>
+        <b>Age</b>
+        <span>16</span>
+    </p>
+
+    <p>
+        <b>Birthday</b>
+        <span>August 13</span>
+    </p>
+
+    <p>
+        <b>Nationality</b>
+        <span>Filipino Spanish-Chinese</span>
+    </p>
+
+    <p>
+        <b>Pronouns</b>
+        <span>She / Her</span>
+    </p>
+
+    <p>
+        <b>Sexuality</b>
+        <span>Straight</span>
+    </p>
+
+    <p>
+        <b>MBTI</b>
+        <span>ESTJ</span>
+    </p>
+
+    <p>
+        <b>Status</b>
+        <span>Single</span>
+    </p>
+
+    <p>
+        <b>Languages</b>
+        <span>Filipino, English, Simplified Chinese (learning), + 3 country dialects</span>
+    </p>
+
+    <p>
+        <b>Timezone</b>
+        <span>PST</span>
+    </p>
+
+</div>
+
+
+<!-- FAVORITES -->
+
+<button class="expand-button">
+
+    <span>Favorites</span>
+
+    <span>＋</span>
+
+</button>
+
+<div class="expand-content">
+
+    <p>
+        <b>Colors</b>
+        <span>Lavender · Amethyst · Lilac · Purple · Wisteria</span>
+    </p>
+
+    <p>
+        <b>Food</b>
+        <span>Pasta · Sushi · Chicken · Desserts</span>
+    </p>
+
+    <p>
+        <b>Music</b>
+        <span>Pop · K-Pop · EDM · R&B · Lofi</span>
+    </p>
+
+    <p>
+        <b>Artists</b>
+        <span>Ariana Grande · BLACKPINK</span>
+    </p>
+
+    <p>
+        <b>Shows</b>
+        <span>C-Dramas · Especially Xianxia</span>
+    </p>
+
+    <p>
+        <b>Games</b>
+        <span>Roblox · Cookie Run: Kingdom · Honkai: Star Rail · Genshin Impact · Among Us</span>
+    </p>
+
+</div>
+
+
+            <!-- INTERESTS & HOBBIES -->
+
+            <button class="expand-button">
+                <span>Interests & Hobbies</span>
+                <span>＋</span>
+            </button>
+
+            <div class="expand-content">
+
+                <p>
+                    I like music, singing, STEM competitions, cats, Pop Mart
+                    (especially Skullpanda), Pandora, fashion, romance,
+                    shopping, foreign languages, chatting, reading pocket
+                    books, and basically anything lavender. I also really
+                    like squishies.
+                </p>
+
+                <p>
+                    My hobbies include playing games with friends, reading
+                    pocket books, singing, watching C-K-J dramas, anime,
+                    shopping, chatting, learning foreign languages, and
+                    joining competitions.
+                </p>
+
+            </div>
+
+
+            <!-- COMPETITIONS -->
+
+            <button class="expand-button">
+                <span>Competitions & Academics</span>
+                <span>＋</span>
+            </button>
+
+            <div class="expand-content">
+
+                <p>
+                    I've joined competitions across seven different types,
+                    and I genuinely enjoy challenging myself academically.
+                    STEM competitions are one of the things I enjoy most
+                    because I like testing myself and seeing how far I can
+                    push my skills.
+                </p>
+
+            </div>
+
+
+            <!-- PERSONALITY -->
+
+            <button class="expand-button">
+                <span>Personality</span>
+                <span>＋</span>
+            </button>
+
+            <div class="expand-content">
+
+                <p>
+                    I'm competitive, energetic, curious, ambitious, and
+                    sometimes impulsive. I can be awkward with new people,
+                    but I usually get more comfortable once we talk more.
+                    I also tend to ramble when I'm excited or talking about
+                    something I really like.
+                </p>
+
+            </div>
+
+
+            <!-- DISLIKES -->
+
+<!-- BEFORE YOU INTERACT -->
+
+<button class="expand-button">
+    <span>Before You Interact</span>
+    <span>＋</span>
+</button>
+
+<div class="expand-content">
+
+    <p>
+        I can be really awkward when it comes to conversations,
+        especially when talking to someone new. I'm usually very
+        energetic and can get pretty hyper, and I can sometimes be
+        a little weird without meaning to. I may take a while to
+        become comfortable around new people, so please bear with me
+        while I warm up!
+    </p>
+
+    <p>
+        I also tend to ramble when I'm excited or talking about
+        something I really enjoy. My replies may occasionally be
+        delayed when I'm busy, but I will get back to you when I can.
+    </p>
+
+</div>
+
+
+<!-- DO NOT INTERACT -->
+
+<button class="expand-button">
+    <span>Do Not Interact</span>
+    <span>＋</span>
+</button>
+
+<div class="expand-content">
+
+    <p>
+        <b>DNI:</b>
+        Disrespectful, toxic, racist, homophobic, transphobic, sexist,
+        ableist, people who intentionally start drama, harass or bully
+        others, ignore boundaries, give false hope, sexualize minors,
+        steal or copy OCs or artwork, or purposely make people
+        uncomfortable. Please don't interact if you're going to be
+        disrespectful or bring unnecessary drama.
+    </p>
+
+</div>
+
+
+            <div class="quote">
+                “I wasn’t made to fit the constellation — I was made to become one.”
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-stars">
+            ⋆｡°✩ ───────── ✩°｡⋆
+        </div>
+
+        <p>
+            Made Of Stardust & Lavender
+        </p>
+
+        <small>
+            ✦ Lahvendee Chantal · 2026 ✦
+        </small>
+
+    </footer>
+
+</div>
+
+
+<!-- Bootstrap -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- JavaScript -->
+
+<script src="main.js"></script>
+
+
+<!-- Python -->
+
+<script
+    type="py"
+    src="main.py"
+></script>
+
+</body>
+
+</html>
