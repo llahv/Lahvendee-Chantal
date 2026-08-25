@@ -385,66 +385,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
-
-    // ==================== BACKGROUND MUSIC ====================
-
-const bgMusic = document.getElementById("bgMusic");
-
-if (bgMusic) {
-
-    bgMusic.volume = 0.25;
-
-    // Try to start immediately
-    bgMusic.play().catch(() => {
-
-        // Browser blocked autoplay.
-        // Start music after the visitor's first interaction.
-
-        const startMusic = () => {
-
-            bgMusic.play().catch(() => {});
-
-            document.removeEventListener(
-                "click",
-                startMusic
-            );
-
-            document.removeEventListener(
-                "touchstart",
-                startMusic
-            );
-
-            document.removeEventListener(
-                "keydown",
-                startMusic
-            );
-
-        };
-
-        document.addEventListener(
-            "click",
-            startMusic,
-            { once: true }
-        );
-
-        document.addEventListener(
-            "touchstart",
-            startMusic,
-            { once: true }
-        );
-
-        document.addEventListener(
-            "keydown",
-            startMusic,
-            { once: true }
-        );
-
-    });
-
-}
-
-
-
     // ==================== DEFAULT SECTION ====================
 
     showSection("about");
@@ -459,50 +399,17 @@ if (bgMusic) {
 
     bgMusic.volume = 0.25;
 
-    // Try to start immediately
     bgMusic.play().catch(() => {
-
-        // Browser blocked autoplay.
-        // Start music after the visitor's first interaction.
 
         const startMusic = () => {
 
             bgMusic.play().catch(() => {});
 
-            document.removeEventListener(
-                "click",
-                startMusic
-            );
-
-            document.removeEventListener(
-                "touchstart",
-                startMusic
-            );
-
-            document.removeEventListener(
-                "keydown",
-                startMusic
-            );
-
         };
 
-        document.addEventListener(
-            "click",
-            startMusic,
-            { once: true }
-        );
-
-        document.addEventListener(
-            "touchstart",
-            startMusic,
-            { once: true }
-        );
-
-        document.addEventListener(
-            "keydown",
-            startMusic,
-            { once: true }
-        );
+        document.addEventListener("click", startMusic, { once: true });
+        document.addEventListener("touchstart", startMusic, { once: true });
+        document.addEventListener("keydown", startMusic, { once: true });
 
     });
 
