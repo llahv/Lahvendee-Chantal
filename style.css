@@ -1193,13 +1193,22 @@ body.dark .expand-content p b {
 
 /* mobile */
 
-/* ==================== MUSIC BUTTON POSITION ==================== */
+/* ==================== MUSIC BUTTON ==================== */
 
 #musicButton {
+    display: block !important;
+    margin: 12px auto 20px auto !important;
     position: relative !important;
-    top: 30px !important;
-    margin-bottom: 30px !important;
-    z-index: 10;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    z-index: 20;
+}
+
+#themeButton {
+    display: block !important;
+    margin: 0 auto !important;
 }
 
 }
