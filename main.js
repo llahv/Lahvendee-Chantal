@@ -394,23 +394,32 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==================== BACKGROUND MUSIC ====================
 
 const bgMusic = document.getElementById("bgMusic");
+const musicButton = document.getElementById("musicButton");
 
-if (bgMusic) {
+if (bgMusic && musicButton) {
 
     bgMusic.volume = 0.25;
 
-    bgMusic.play().catch(() => {
+    musicButton.addEventListener("click", function () {
 
-        const startMusic = () => {
+        if (bgMusic.paused) {
 
-            bgMusic.play().catch(() => {});
+            bgMusic.play()
+                .then(() => {
+                    musicButton.textContent = "♫";
+                })
+                .catch((error) => {
+                    console.log("Music could not play:", error);
+                });
 
-        };
+        } else {
 
-        document.addEventListener("click", startMusic, { once: true });
-        document.addEventListener("touchstart", startMusic, { once: true });
-        document.addEventListener("keydown", startMusic, { once: true });
+            bgMusic.pause();
+            musicButton.textContent = "♪";
+
+        }
 
     });
 
 }
+
